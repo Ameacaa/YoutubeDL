@@ -1,0 +1,1 @@
+Dflt = { 'Type' : 'audio', 'Link' : 'https://www.youtube.com/playlist?list=PLnCmeDfRjs0L4HtcCffkioc6nOOKRsTW2', 'FolderLoc' : 'C:\Users\Ameaça\Desktop\YoutubeDL\' }

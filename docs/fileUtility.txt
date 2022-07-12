@@ -1,5 +1,11 @@
 ytbdl.py:
+    Command file to use the app
+
+youtubedl.py
     Download video or audio from youtube link
 
 helpcmd.py:
     Help the user with command and tree list
+
+show.py
+    Used to show data from file (logo, help,...)
