@@ -1,14 +1,8 @@
-from typing import Dict
+from data import TXTLOC
 
-
-txtLoc : Dict= {
-    'logo' : 'txts\\logo.txt',
-    'help' : 'txts\\help.txt'
-}
-
-def FromFile(file):
+def FromFile(key):
     try:
-        f = open(txtLoc[file])
+        f = open(TXTLOC[key])
         for l in f.readlines:
             print(l)
     except:

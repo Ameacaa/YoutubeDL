@@ -1,18 +1,32 @@
 import os
 import sys
+from data import DEFAULTS
 from typing import Dict
+from show import FromFile
+from ytb import IsPlaylist
 
 FolderLoc = ''
 Type = ''
 Link = ''
+isPlaylist = False
+
+def GetDefault():
+    global Type, Link, FolderLoc
+    FolderLoc = DEFAULTS['FolderLoc']
+    Link = DEFAULTS['Link']
+    Type = DEFAULTS['Type']
 
 
-def getDefault():
-    f = open("txts\\default.txt", "r")
-    defaults : Dict = f.readline()
-    print(defaults)
+def PrintValues():
+    print(f"Folder Location: {FolderLoc}\nDownload Type: {Type}\nYoutube Link: {Link}\nIs a Playlist: {isPlaylist}")
+
 
 if __name__ == "__main__":
+    FromFile('Logo')
+    GetDefault()
+    isPlaylist = IsPlaylist(Link)
+    PrintValues()
+    """
     args = sys.argv
     args.pop(0)
     largs = len(args)
@@ -64,3 +78,4 @@ if __name__ == "__main__":
         video(linkIsPlaylist)
     else:
         print("Something is wrong in the command. Type \'ytbdl.py help\' if you need more help")
+    """
