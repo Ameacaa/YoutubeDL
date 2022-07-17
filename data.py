@@ -6,13 +6,14 @@ DEFAULTS : Dict = { 'Type' : 'audio',
 
 TXTLOC : Dict = {
     'Logo' : 'txts\\logo.txt',
-    'Help' : 'txts\\help.txt'
+    'Help' : 'txts\\help.txt',
+    'Cmd'  : 'txts\\cmds.txt'
 }
 
 # First Position is default
-MODULES : list = [
-    "audio", 
-    "video", 
-    "help", 
-    "menu"
-]
+MODULES : Dict = {
+    'A' : 'audio', 
+    'V' : 'video', 
+    'H' : 'help',
+    'M' : 'menu'
+}

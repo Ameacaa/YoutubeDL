@@ -3,6 +3,7 @@ import sys
 from data import DEFAULTS, MODULES
 from show import FromFile
 from ytb import IsPlaylist
+from menu import TreeMenu
 
 FolderLoc = ''
 Type = ''
@@ -33,15 +34,33 @@ if __name__ == "__main__":
     GetDefault()
     isPlaylist = IsPlaylist(Link)
     PrintValues()
+    for x in MODULES:
+        print(x)
+    exit()
     
     args = sys.argv
     args.pop(0)
     largs = len(args)
     
     # Putting args in variables to simplify
+    match(largs):
+        case 0:
+            FromFile('Help')
+            exit()
+        case 1:
+            if(args[0] not in MODULES):
+                print('ERROR - THIS IS NOT A COMMAND - Please watch the help\n')
+                FromFile('Help')
+                exit()
+            else:
+                if (args[0] == MODULES["H"]):
+                    FromFile('Help')
+                    exit()
+
+
+
     if (largs == 0):
-        menu()
-        exit()
+        TreeMenu()
     elif (largs == 1):
         if args[0] == "help":
             help()
