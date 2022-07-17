@@ -1,0 +1,15 @@
+
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│ EXISTING MODULES:                                                                       │
+│   default             -- Use default values to download video                           │
+│   menu                -- Create a menu to easily use the application and change values  │
+│   help                -- Show more detailed help                                        │
+│   video               -- Download video                                                 │
+│   audio               -- Download audio                                                 │
+│                                                                                         │
+│ USAGE:                                                                                  │
+│     python ytbdl.py default     -- This command use the default link in ytbdl.py file   │
+│     python ytbdl.py link        -- Download the Youtube link with default mode          │
+│     python ytbdl.py video link  -- Download the Youtube link with video mode            │
+│     python ytbdl.py menu        -- Create a menu list (For New User)                    │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
