@@ -14,4 +14,5 @@
 │     python ytbdl.py default     -- This command use the default link in ytbdl.py file   │
 │     python ytbdl.py link                                                                │
 │     python ytbdl.py video link                                                          │
+│     python ytbdl.py menu        -- Create a menu list (For New User)                    │
 └─────────────────────────────────────────────────────────────────────────────────────────┘

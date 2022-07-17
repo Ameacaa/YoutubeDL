@@ -1,7 +1,6 @@
 import os
 import sys
-from data import DEFAULTS
-from typing import Dict
+from data import DEFAULTS, MODULES
 from show import FromFile
 from ytb import IsPlaylist
 
@@ -9,33 +8,39 @@ FolderLoc = ''
 Type = ''
 Link = ''
 isPlaylist = False
+mod = ''
 
+
+# Setup variables to default values
 def GetDefault():
-    global Type, Link, FolderLoc
+    global Type, Link, FolderLoc, mod
     FolderLoc = DEFAULTS['FolderLoc']
     Link = DEFAULTS['Link']
     Type = DEFAULTS['Type']
+    mod = MODULES[0]
 
 
+# Show variables value
 def PrintValues():
     print(f"Folder Location: {FolderLoc}\nDownload Type: {Type}\nYoutube Link: {Link}\nIs a Playlist: {isPlaylist}")
 
 
+# ----------------------
 if __name__ == "__main__":
+    # Tests
+    os.system("cls")
     FromFile('Logo')
     GetDefault()
     isPlaylist = IsPlaylist(Link)
     PrintValues()
-    """
+    
     args = sys.argv
     args.pop(0)
     largs = len(args)
-    modules = ["help", "video", "audio"]
-    mod = "audio"
-
+    
     # Putting args in variables to simplify
     if (largs == 0):
-        help()
+        menu()
         exit()
     elif (largs == 1):
         if args[0] == "help":
@@ -78,4 +83,4 @@ if __name__ == "__main__":
         video(linkIsPlaylist)
     else:
         print("Something is wrong in the command. Type \'ytbdl.py help\' if you need more help")
-    """
+    
