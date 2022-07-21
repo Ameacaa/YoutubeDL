@@ -1,2 +1,0 @@
-ytbdl.py default
-ytbdl.py [/dltype] [link]
